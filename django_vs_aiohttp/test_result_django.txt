@@ -1,0 +1,168 @@
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient).....done
+
+
+Server Software:        WSGIServer/0.2
+Server Hostname:        127.0.0.1
+Server Port:            8089
+
+Document Path:          /
+Document Length:        16 bytes
+
+Concurrency Level:      5
+Time taken for tests:   4.286 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      20000 bytes
+HTML transferred:       1600 bytes
+Requests per second:    23.33 [#/sec] (mean)
+Time per request:       214.285 [ms] (mean)
+Time per request:       42.857 [ms] (mean, across all concurrent requests)
+Transfer rate:          4.56 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:   202  203   1.7    203     212
+Waiting:      202  203   1.4    202     211
+Total:        202  204   1.7    203     212
+
+Percentage of the requests served within a certain time (ms)
+  50%    203
+  66%    203
+  75%    204
+  80%    204
+  90%    204
+  95%    206
+  98%    212
+  99%    212
+ 100%    212 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient).....done
+
+
+Server Software:        WSGIServer/0.2
+Server Hostname:        127.0.0.1
+Server Port:            8089
+
+Document Path:          /
+Document Length:        16 bytes
+
+Concurrency Level:      10
+Time taken for tests:   2.256 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      20000 bytes
+HTML transferred:       1600 bytes
+Requests per second:    44.32 [#/sec] (mean)
+Time per request:       225.614 [ms] (mean)
+Time per request:       22.561 [ms] (mean, across all concurrent requests)
+Transfer rate:          8.66 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       1
+Processing:   202  204   3.6    203     219
+Waiting:      201  203   2.9    202     215
+Total:        202  204   3.7    203     220
+
+Percentage of the requests served within a certain time (ms)
+  50%    203
+  66%    203
+  75%    204
+  80%    205
+  90%    208
+  95%    216
+  98%    219
+  99%    220
+ 100%    220 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient).....done
+
+
+Server Software:        WSGIServer/0.2
+Server Hostname:        127.0.0.1
+Server Port:            8089
+
+Document Path:          /
+Document Length:        16 bytes
+
+Concurrency Level:      20
+Time taken for tests:   1.669 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      20000 bytes
+HTML transferred:       1600 bytes
+Requests per second:    59.93 [#/sec] (mean)
+Time per request:       333.724 [ms] (mean)
+Time per request:       16.686 [ms] (mean, across all concurrent requests)
+Transfer rate:          11.71 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   83 281.2      0    1032
+Processing:   202  207   5.2    204     223
+Waiting:      202  205   4.3    203     220
+Total:        202  289 282.2    204    1250
+
+Percentage of the requests served within a certain time (ms)
+  50%    204
+  66%    209
+  75%    211
+  80%    211
+  90%    223
+  95%   1241
+  98%   1245
+  99%   1250
+ 100%   1250 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient).....done
+
+
+Server Software:        WSGIServer/0.2
+Server Hostname:        127.0.0.1
+Server Port:            8089
+
+Document Path:          /
+Document Length:        16 bytes
+
+Concurrency Level:      40
+Time taken for tests:   1.641 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      20000 bytes
+HTML transferred:       1600 bytes
+Requests per second:    60.93 [#/sec] (mean)
+Time per request:       656.492 [ms] (mean)
+Time per request:       16.412 [ms] (mean, across all concurrent requests)
+Transfer rate:          11.90 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0  193 400.4      0    1017
+Processing:   202  224  53.4    207     421
+Waiting:      202  222  53.6    206     421
+Total:        202  417 435.0    209    1437
+
+Percentage of the requests served within a certain time (ms)
+  50%    209
+  66%    214
+  75%    227
+  80%    231
+  90%   1242
+  95%   1430
+  98%   1436
+  99%   1437
+ 100%   1437 (longest request)

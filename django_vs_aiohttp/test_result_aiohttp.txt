@@ -1,0 +1,168 @@
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient).....done
+
+
+Server Software:        Python/3.8
+Server Hostname:        127.0.0.1
+Server Port:            8088
+
+Document Path:          /
+Document Length:        16 bytes
+
+Concurrency Level:      5
+Time taken for tests:   10.136 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      16700 bytes
+HTML transferred:       1600 bytes
+Requests per second:    9.87 [#/sec] (mean)
+Time per request:       506.824 [ms] (mean)
+Time per request:       101.365 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.61 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       0
+Processing:   102  498  44.5    506     508
+Waiting:      102  377 123.5    405     507
+Total:        102  499  44.6    507     508
+
+Percentage of the requests served within a certain time (ms)
+  50%    507
+  66%    507
+  75%    507
+  80%    507
+  90%    508
+  95%    508
+  98%    508
+  99%    508
+ 100%    508 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient).....done
+
+
+Server Software:        Python/3.8
+Server Hostname:        127.0.0.1
+Server Port:            8088
+
+Document Path:          /
+Document Length:        16 bytes
+
+Concurrency Level:      10
+Time taken for tests:   10.133 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      16700 bytes
+HTML transferred:       1600 bytes
+Requests per second:    9.87 [#/sec] (mean)
+Time per request:       1013.292 [ms] (mean)
+Time per request:       101.329 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.61 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.2      0       1
+Processing:   103  995  94.5   1012    1015
+Waiting:      102  630 282.1    608    1014
+Total:        103  995  94.5   1013    1015
+
+Percentage of the requests served within a certain time (ms)
+  50%   1013
+  66%   1013
+  75%   1013
+  80%   1013
+  90%   1014
+  95%   1014
+  98%   1014
+  99%   1015
+ 100%   1015 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient).....done
+
+
+Server Software:        Python/3.8
+Server Hostname:        127.0.0.1
+Server Port:            8088
+
+Document Path:          /
+Document Length:        16 bytes
+
+Concurrency Level:      20
+Time taken for tests:   10.133 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      16700 bytes
+HTML transferred:       1600 bytes
+Requests per second:    9.87 [#/sec] (mean)
+Time per request:       2026.539 [ms] (mean)
+Time per request:       101.327 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.61 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.2      1       1
+Processing:   103 1917 278.8   2025    2027
+Waiting:      102 1215 565.4   1316    2025
+Total:        103 1917 278.7   2026    2027
+
+Percentage of the requests served within a certain time (ms)
+  50%   2026
+  66%   2026
+  75%   2027
+  80%   2027
+  90%   2027
+  95%   2027
+  98%   2027
+  99%   2027
+ 100%   2027 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient).....done
+
+
+Server Software:        Python/3.8
+Server Hostname:        127.0.0.1
+Server Port:            8088
+
+Document Path:          /
+Document Length:        16 bytes
+
+Concurrency Level:      40
+Time taken for tests:   10.133 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      16700 bytes
+HTML transferred:       1600 bytes
+Requests per second:    9.87 [#/sec] (mean)
+Time per request:       4053.353 [ms] (mean)
+Time per request:       101.334 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.61 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.5      1       2
+Processing:   104 3502 624.6   3443    4053
+Waiting:      102 2149 1042.2   2129    4049
+Total:        104 3503 624.6   3445    4053
+
+Percentage of the requests served within a certain time (ms)
+  50%   3445
+  66%   4050
+  75%   4052
+  80%   4053
+  90%   4053
+  95%   4053
+  98%   4053
+  99%   4053
+ 100%   4053 (longest request)
