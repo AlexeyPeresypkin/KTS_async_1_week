@@ -4,8 +4,8 @@ from aiohttp import web
 
 
 async def handle(request):
-    # await asyncio.sleep(0.5)
-    time.sleep(0.1)
+    await asyncio.sleep(0.2)
+    # time.sleep(0.1)
     return web.Response(text='Hello, Anonymous')
 
 

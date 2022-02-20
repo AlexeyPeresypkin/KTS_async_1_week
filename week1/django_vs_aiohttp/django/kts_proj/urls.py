@@ -21,7 +21,7 @@ from django.urls import path
 
 
 def index(request):
-    time.sleep(0.5)
+    time.sleep(0.3)
     return HttpResponse(status=200, content='Hello, Anonymous')
 
 
