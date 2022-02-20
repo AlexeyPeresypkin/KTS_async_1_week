@@ -13,7 +13,7 @@ async def request_users_data(uid: int) -> dict:
 
 ids = [i for i in range(1, 11)]
 loop = asyncio.get_event_loop()  # получаем loop, тк ранее он не существовал - создаем новый
-with open("out.csv", "w") as fh:  # открываем фаил для записи
+with open("../out.csv", "w") as fh:  # открываем фаил для записи
     fieldnames = ["id", "name", "email"]  # названия колонок в csv файле
     writer = csv.DictWriter(fh, fieldnames=fieldnames)
     # объект для записи данных в csv формате

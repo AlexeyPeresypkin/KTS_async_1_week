@@ -8,8 +8,7 @@ async def send_statistic():  # наш "поход" в сторонний сер�
 
 async def worker():
     while True:
-        await asyncio.sleep(60)
-        print('end await')
+        await asyncio.sleep(10)
         await send_statistic()
 
 
