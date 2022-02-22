@@ -2,6 +2,8 @@ import asyncio
 from dataclasses import dataclass
 from typing import Optional
 from task import Task
+from fetch_task import FetchTask
+from yarl import URL
 
 
 class Pool:
@@ -17,7 +19,7 @@ class Pool:
         self._concurrent_workers = 0
         self._stop_event = asyncio.Event()
 
-    async def _worker(self, task: Task):
+    async def _worker(self, task: FetchTask):
         async with self._sem:
             self._concurrent_workers += 1
             await task.perform(self)
@@ -38,7 +40,7 @@ class Pool:
         self.is_running = True
         self._scheduler_task = asyncio.create_task(self._scheduler())
 
-    async def put(self, task: Task):
+    async def put(self, task: FetchTask):
         await self._queue.put(task)
 
     async def join(self):
@@ -46,14 +48,19 @@ class Pool:
 
     async def stop(self):
         self.is_running = False
-        self._scheduler_task.cancel()
         if self._concurrent_workers != 0:
             await self._stop_event.wait()
+        self._scheduler_task.cancel()
 
 
 async def start(pool):
-    for tid in range(1, 11):
-        await pool.put(Task(tid))
+    await pool.put(
+        FetchTask(
+            tid=1,
+            url=URL('https://habr.com/ru/company/kts/blog/'),
+            depth=1
+        )
+    )
     await pool.start()
     await pool.join()
     await pool.stop()
