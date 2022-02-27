@@ -4,7 +4,7 @@ import aiohttp
 
 async def req_post_file():
     async with aiohttp.ClientSession() as session:
-        files = {'file': open('README.md', 'rb')}
+        files = {'file': open('../README.md', 'rb')}
         async with session.post('http://httpbin.org/post', data=files) as resp:
             print(await resp.json())
 
