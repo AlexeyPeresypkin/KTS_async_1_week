@@ -7,20 +7,20 @@ def get_data(request: web.Request):
         'host': request.host,
         'path': request.path,
         "query_string": request.query_string,
-        "query": request.secure,
+        "query": request.query_string,
         "scheme": request.scheme,
         "secure": request.secure,
         "http_version": request.version,
         "headers": {
-            "Host": request.headers['User-Agent'],
+            "Host": request.host,
             "Accept": request.version,
-            "User-Agent": request.scheme,
-            "Accept-Language": request.headers['Host'],
-            "Accept-Encoding": "gzip, deflate",
-            "Connection": "keep-alive"
+            "User-Agent": request.headers['User-Agent'],
+            "Accept-Language": request.headers['Accept-Language'],
+            "Accept-Encoding": request.headers['Accept-Encoding'],
+            "Connection": request.headers["Connection"]
         },
-        "cookies": 'request.cookies',
-        "json": 'json'
+        "cookies": request.cookies['csrftoken'],
+        "json": request.json().cr_await,
     }
     return data
 

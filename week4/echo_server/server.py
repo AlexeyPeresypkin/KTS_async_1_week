@@ -7,29 +7,31 @@ app = web.Application()
 class View(web.View):
     async def get(self):
         data = get_data(self.request)
-        print(data)
         return web.json_response(data)
-        # print(self.request.method)
-        # print(web.Response.body)
-        # return web.Response(status=200, text='Hi')
 
     async def post(self):
-        print(self.request)
+        data = get_data(self.request)
+        return web.json_response(data)
 
     async def delete(self):
-        pass
+        data = get_data(self.request)
+        return web.json_response(data)
 
     async def put(self):
-        pass
+        data = get_data(self.request)
+        return web.json_response(data)
 
     async def patch(self):
-        pass
+        data = get_data(self.request)
+        return web.json_response(data)
 
     async def options(self):
-        pass
+        data = get_data(self.request)
+        return web.json_response(data)
 
     async def head(self):
-        pass
+        data = get_data(self.request)
+        return web.json_response(data)
 
 
 app.add_routes([web.route('*', '/{tail:.*}', View)])
