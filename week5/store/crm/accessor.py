@@ -1,5 +1,6 @@
 import typing
-from typing import Optional
+import uuid
+from typing import Optional, List
 
 from src.week5.crm.models import User
 
@@ -23,5 +24,15 @@ class CrmAccessor:
         self.app = None
         print('disconnect from database')
 
-    async def add_use(self, user: User):
+    async def add_user(self, user: User):
         self.app.database['users'].append(user)
+
+    async def list_users(self) -> List[User]:
+        return self.app.database['users']
+
+    async def get_user(self, id_: uuid.UUID):
+        for user in self.app.database['users']:
+            if user.id_ == id_:
+                return user
+        return None
+
