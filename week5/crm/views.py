@@ -1,6 +1,7 @@
 import uuid
 
-from aiohttp.web_exceptions import HTTPNotFound
+from aiohttp.web_exceptions import HTTPNotFound, HTTPUnauthorized, \
+    HTTPForbidden
 from aiohttp_apispec import docs, request_schema, response_schema, \
     querystring_schema
 
@@ -9,7 +10,7 @@ from src.week5.crm.schemes import UserSchema, ListUsersResponseSchema, \
     UserGetRequestSchema, UserGetResponseSchema, UserAddSchema
 from src.week5.web.app import View
 from src.week5.web.schemes import OkResponseSchema
-from src.week5.web.utils import json_response
+from src.week5.web.utils import json_response, check_basic_auth
 
 
 class AddUserView(View):
@@ -30,10 +31,16 @@ class ListUsersView(View):
     @request_schema(UserSchema)
     @response_schema(ListUsersResponseSchema, 200)
     async def get(self):
+        if self.request.headers.get('Authorization'):
+            raise HTTPUnauthorized
+        if not check_basic_auth(self.request.headers['Authorization'],
+                                username=self.request.app.config.username,
+                                password=self.request.app.config.password):
+            raise HTTPForbidden
         users = await self.request.app.crm_accessor.list_users()
-        raw_useres = [{'email': user.email, '_id': str(user.id_)} for user in
-                      users]
-        return json_response(data={'users': raw_useres})
+        raw_users = [UserSchema.dump(user) for user in
+                     users]
+        return json_response(data={'users': raw_users})
 
 
 class GetUsersView(View):
@@ -42,12 +49,17 @@ class GetUsersView(View):
     @querystring_schema(UserGetRequestSchema)
     @response_schema(UserGetResponseSchema, 200)
     async def get(self):
+        if self.request.headers.get('Authorization'):
+            raise HTTPUnauthorized
+        if not check_basic_auth(self.request.headers['Authorization'],
+                                username=self.request.app.config.username,
+                                password=self.request.app.config.password):
+            raise HTTPForbidden
         user_id = self.request.query.get('id')
         user = await self.request.app.crm_accessor.get_user(uuid.UUID(user_id))
         if user:
             return json_response(
-                data={
-                    'user': {'email': user.email, 'id_': str(user.id_)}
-                })
+                data={'user': UserSchema.dump(user)}
+            )
         else:
             raise HTTPNotFound
