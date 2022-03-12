@@ -1,5 +1,7 @@
 # KTS_school_async_on_python
 
+### Курс от школы [KTS](https://metaclass.kts.studio/#courses) - Асинхронное программирование на Python для начинающих
+
 ## week1
 CPU / IO bound operations:     
 - Threading 
@@ -20,3 +22,16 @@ aiohttp client
 - protocol S3
 - Telegram api
 - aiobotocore
+
+
+## week4
+aiohttp server      
+- auth
+- echo_server
+- middlewares
+- request_response
+- validation
+
+## week5
+aiohttp server      
+Пишем простой aiohttp server    
